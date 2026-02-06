@@ -1,0 +1,14 @@
+# Ignore compiled binaries
+gateway
+*.exe
+*.o
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore VS Code settings (optional, but good practice)
+.vscode/
+
+# Ignore System files
+.DS_Store
