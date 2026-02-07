@@ -11,12 +11,12 @@
 #define UDP_IP "127.0.0.1"
 #define UDP_PORT 5000     // Virtual Bus for Python AI
 
-// Status Codes
+// Status check Codes
 #define STATUS_OK 0x00
 #define STATUS_WARN_LOW_VOLT 0x01
 #define STATUS_CRIT_TEMP 0x02
 
-// Structure that looks exactly like a CAN frame
+// Create a structure that looks exactly like a CAN frame
 typedef struct __attribute__((packed)) {
     uint32_t can_id;
     uint8_t dlc;

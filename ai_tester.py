@@ -23,7 +23,7 @@ print("=================================================")
 # --- PHASE 1: DATA COLLECTION ---
 print("\n[PHASE 1] LEARNING NORMAL BEHAVIOR...")
 print("Please leave the Mock Sensor running normally.")
-print("Collecting 200 samples (approx 20 seconds)...")
+print("Collecting 200 samples (approx ~20 seconds)...")
 
 training_data = []
 
@@ -44,7 +44,8 @@ while len(training_data) < 200:
 print("[PHASE 1] COMPLETE. Data Collected.")
 
 # --- PHASE 2: MODEL TRAINING ---
-print("\n[PHASE 2] TRAINING AI MODEL...")
+print("\n\n\n\n\n[PHASE 2] TRAINING AI MODEL...")
+
 df = pd.DataFrame(training_data, columns=['Voltage', 'Temp'])
 
 # Isolation Forest: Unsupervised Anomaly Detection
@@ -57,7 +58,9 @@ print(f"Normal Voltage Range: {df['Voltage'].min()}mV - {df['Voltage'].max()}mV"
 print(f"Normal Temp Range:    {df['Temp'].min()}C - {df['Temp'].max()}C")
 
 # --- PHASE 3: LIVE MONITORING ---
-print("\n[PHASE 3] LIVE AI MONITORING (Ctrl+C to stop)")
+print("\n\n\n[PHASE 3] Press Enter to continue LIVE AI MONITORING...")
+input()  # Waits until the user presses Enter
+print("\n(Ctrl+C to stop)")
 print("Waiting for data...")
 
 try:
