@@ -1,6 +1,6 @@
-# 🧠 Virtual CAN HIL System with AI Based Battery Behavior Monitoring
+# Virtual CAN HIL System with AI Based Battery Behavior Monitoring
 
-## 🚀 Project Overview
+## Project Overview
 
 This repository implements a **fully virtual Hardware in the Loop HIL system** for validating embedded ECU logic and **AI based behavioral anomaly detection**, without requiring:
 
