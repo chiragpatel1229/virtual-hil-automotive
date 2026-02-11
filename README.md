@@ -48,18 +48,36 @@ Communication between components uses standard TCP (sensor → gateway) and UDP 
 ---
 
 ## 📂 Project Structure
+virtual-hil-battery-ai/
+│
+├── README.md
+│
+├── c_src/
+│   ├── common/
+│   │   ├── protocol files
+│   │
+│   ├── mock_sensor/
+│   │   ├── mock_sensor files
+│   │
+│   ├── gateway/
+│   │   ├── gateway files
+|   |
+│   ├── main/
+│   |    ├── mock_sensor_main files
+│   │
+│   └── Makefile               # Optional: build automation
+│
+├── python/
+│   └── main + config + can_parser + ai_model + monitor - files
+│
+├── logs/
+│   └── .gitkeep
+│
+└── Makefile               # Optional: build automation
 
-- `sensor`  
-  Mock battery sensor simulation with fault injection
-
-- `gateway`  
-  Safety-aware data validation and virtual CAN forwarding
-
-- `ai_validator`  
-  Unsupervised anomaly detection and visualization
-
-- `README.md`
-
+- `c_src/` → All embedded-style C code (modularized: common protocol, sensor, gateway, main entry points)  
+- `python/` → AI monitoring, parsing, model training and visualization  
+- `logs/` → Placeholder for future log / CSV outputs (kept trackable with `.gitkeep`)
 
 ---
 

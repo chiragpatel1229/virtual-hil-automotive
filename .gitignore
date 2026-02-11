@@ -1,8 +1,11 @@
 # Ignore compiled binaries
-gateway
-*.exe
-*.out
 *.o
+*.out
+*.exe
+*.bin
+*.txt
+gateway_app
+mock_sensor_app
 
 # SSH keys
 id_ed25519*
@@ -14,6 +17,7 @@ eval*
 # Ignore Python cache
 __pycache__/
 *.pyc
+.python-version
 venv/
 
 # Ignore VS Code settings and extensions
