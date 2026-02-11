@@ -54,18 +54,16 @@ Communication between components uses standard TCP (sensor → gateway) and UDP 
 ├── Makefile
 ├── c_src/
 │   ├── common/        # Shared protocol definitions and headers
-│   ├── mock_sensor/   # Sensor simulation logic (STM32 behavior)
+│   ├── mock_sensor/   # Sensor simulation logic
 │   ├── gateway/       # ECU Gateway and Safety Logic
 │   └── main/          # Entry points for C binaries
 ├── python/
-│   ├── main.py        # AI Monitoring entry point
-│   ├── config.py      # Hyperparameters
-│   ├── can_parser.py  # UDP or CAN frame decoding
-│   ├── ai_model.py    # Isolation Forest implementation
-│   └── monitor.py     # Live visualization and logging
-└── logs/              # Data logs and saved plots
-
-
+│   ├── main.py
+│   ├── config.py
+│   ├── can_parser.py
+│   ├── ai_model.py
+│   └── monitor.py
+└── logs/
 
 - **`c_src/`** → All embedded-style C code (modularized: common utilities, sensor simulation, gateway logic, main entry points)
 - **`python/`** → Contains the AI-based monitoring, data parsing, model training, and visualization logic  
