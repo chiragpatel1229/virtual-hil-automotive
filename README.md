@@ -58,12 +58,13 @@ Communication between components uses standard TCP (sensor → gateway) and UDP 
 │   ├── gateway/       # ECU Gateway and Safety Logic
 │   └── main/          # Entry points for C binaries
 ├── python/
-│   ├── main.py
-│   ├── config.py
-│   ├── can_parser.py
-│   ├── ai_model.py
-│   └── monitor.py
-└── logs/
+│   ├── main.py        # AI Monitoring entry point
+│   ├── config.py      # Hyperparameters
+│   ├── can_parser.py  # UDP or CAN frame decoding
+│   ├── ai_model.py    # Isolation Forest implementation
+│   └── monitor.py     # Live visualization and logging
+└── logs/              # Data logs and saved plots
+
 
 - **`c_src/`** → All embedded-style C code (modularized: common utilities, sensor simulation, gateway logic, main entry points)
 - **`python/`** → Contains the AI-based monitoring, data parsing, model training, and visualization logic  
